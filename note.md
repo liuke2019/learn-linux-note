@@ -2,9 +2,9 @@
 
 课程地址：[实验楼](https://www.shiyanlou.com/courses/1)
 
-<br>
-
 ## Linux 系统简介
+
+---
 
 ## 基本操作及概念
 
@@ -34,7 +34,7 @@ $ pwd
 
 <kbd>ctrl</kbd> + <kbd>c</kbd> ：强制终止
 
-<br>
+---
 
 ## 用户及文件权限管理
 
@@ -49,6 +49,7 @@ $ who am i
 ```shell
 $ whoami
 ```
+---
 
 创建用户需要 root 权限，要用到 sudo 命令，使用 sudo 有两个条件：
 
@@ -81,7 +82,7 @@ $ exit
 
 或者 <kbd>ctrl</kbd> + <kbd>d</kbd>
 
-<br>
+---
 
 **用户组：** Linux每个用户都有一个用户组，共享一些资源和权限。
 
@@ -124,11 +125,15 @@ $ sudo usermod -G sudo lilei
 $ groups lilei
 ```
 
+---
+
 删除 lilei 用户：
 
 ```shell
 $ sudo deluser lilei --remove-home
 ```
+
+---
 
 使用较长格式列出文件：
 
@@ -156,13 +161,13 @@ $ ls -Al
 $ ls -dl <目录名>
 ```
 
-显示所有文件大小，并以普通人能看懂的方式呈现()：
+显示所有文件大小，并以普通人能看懂的方式呈现：
 
 ```shell
 $ ls -AsSh
 ```
 
-<br>
+---
 
 查看文件属性：
 
@@ -178,7 +183,7 @@ $ ls iphone6
 $ sudo chown shiyanlou iphone6
 ```
 
-<br>
+---
 
 每个文件有三组权限：拥有者、所属用户组、其他用户。每个权限对应一个3位二进制数：rwx。
 
@@ -201,3 +206,5 @@ $ chmod go-rw iphone6
 |g|group|+|增加权限|
 |o|others|-|删除权限|
 |u|user|
+
+---

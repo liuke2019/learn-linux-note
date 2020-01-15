@@ -25,7 +25,6 @@ $ pwd
 
 ### 快捷键
 
-tab：自动补全
+<kbd>tab</kbd> ：自动补全
 
-ctrl + c：强制终止
-
+<kbd>ctrl</kbd> + <kbd>c</kbd> ：强制终止

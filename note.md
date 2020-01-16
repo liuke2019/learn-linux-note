@@ -203,8 +203,9 @@ $ chmod go-rw iphone6
 
 | 参数 | 含义 | 参数 | 含义 |
 | --- | --- | --- | --- |
-|g|group|+|增加权限|
-|o|others|-|删除权限|
-|u|user|
+|u|user|+|增加权限|
+|g|group|-|删除权限|
+|o|others|
 
 ---
+

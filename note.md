@@ -201,11 +201,112 @@ $ chmod go-rw iphone6
 
 其中：
 
-| 参数 | 含义 | 参数 | 含义 |
-| --- | --- | --- | --- |
+|参数|含义|参数|含义|
+|---|---|---|---|
 |u|user|+|增加权限|
 |g|group|-|删除权限|
 |o|others|
 
 ---
 
+## Linux 目录结构及文件基本操作
+
+FHS（Filesystem Hierarchy Standard，文件系统层次结构标准），多数 Linux 版本采用这种文件组织形式，FHS 定义了系统中每个区域的用途、所需要的最小构成的文件和目录同时还给出了例外处理与矛盾处理。
+
+FHS 定义了两层规范：
+
+- 第一层是 / 下面的各个目录应该要放什么文件数据，例如 /etc 应该放置设置文件，/bin 与 /sbin 则应该放置可执行文件等等。
+- 第二层针对 /usr 及 /var 这两个目录的子目录来定义。例如 /var/log 放置系统日志文件，/usr/share 放置共享数据等等。
+
+|目录|含义|
+|---|---|
+|.|当前目录|
+|..|上级目录|
+|~|当前用户的home目录|
+
+- 绝对路径，以根 / 目录为起点的完整路径，以你所要到的目录为终点。
+- 相对路径，以当前目录 . 为起点，以你所要到的目录为终点。
+
+创建名为 mydir 的空目录：
+
+```shell
+$ mkdir mydir
+```
+
+同时创建一个多级目录：
+
+```shell
+$ mkdir -p father/son/grandson
+```
+
+复制一个文件到指定目录：
+
+```shell
+$ cp file father/son/grandson
+```
+
+复制目录（递归复制）：
+
+```shell
+$ cp -r father family
+```
+
+删除文件：
+
+```shell
+$ rm file
+```
+
+删除目录(递归删除)：
+
+```shell
+$ rm -r family
+```
+
+移动文件 file 到 Documents 目录：
+
+```shell
+$ mv file Documents
+```
+
+重命名文件 file1 到 file2：
+
+```shell
+$ mv file1 file2
+```
+
+查看文件内容：
+
+```shell
+$ cat file
+```
+
+显示行号：
+
+```shell
+$ cat -n file
+```
+
+分页查看：
+
+```shell
+$ more file
+```
+
+查看最后10行：
+
+```shell
+$ tail file
+```
+
+查看最后1行：
+
+```shell
+$ tail -n 1 file
+```
+
+查看文件类型：
+
+```shell
+$ file filename
+```
